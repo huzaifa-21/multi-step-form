@@ -1,5 +1,9 @@
-/* primary color */
-/* natural color */
+main .form .steps .step-4 .step-number, main .form .steps .step-4, main .form .steps .step-3 .step-number, main .form .steps .step-3, main .form .steps .step-2 .step-number, main .form .steps .step-2, main .form .steps .step-1 .step-number, main .form .steps .step-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,4 +12,161 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: hsl(217, 100%, 97%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .form {
+  background-color: hsl(0, 0%, 100%);
+  padding: 15px;
+  display: flex;
+  gap: 30px;
+  border-radius: 8px;
+}
+main .form .steps {
+  background-image: url(./assets/images/bg-sidebar-desktop.svg);
+  padding: 20px;
+  width: 274px;
+  height: 567px;
+}
+main .form .steps .step-1 {
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+main .form .steps .step-1 .step-number {
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 16px;
+  margin-right: 20px;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+main .form .steps .step-1 .step-info {
+  text-transform: uppercase;
+}
+main .form .steps .step-1 .step-info .step-head {
+  color: hsl(231, 11%, 63%);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+main .form .steps .step-1 .step-info .step-name {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+main .form .steps .step-1.active .step-number {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+  border: 1px solid hsl(243, 100%, 62%);
+}
+main .form .steps .step-2 {
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+main .form .steps .step-2 .step-number {
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 16px;
+  margin-right: 20px;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+main .form .steps .step-2 .step-info {
+  text-transform: uppercase;
+}
+main .form .steps .step-2 .step-info .step-head {
+  color: hsl(231, 11%, 63%);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+main .form .steps .step-2 .step-info .step-name {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+main .form .steps .step-2.active .step-number {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+  border: 1px solid hsl(243, 100%, 62%);
+}
+main .form .steps .step-3 {
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+main .form .steps .step-3 .step-number {
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 16px;
+  margin-right: 20px;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+main .form .steps .step-3 .step-info {
+  text-transform: uppercase;
+}
+main .form .steps .step-3 .step-info .step-head {
+  color: hsl(231, 11%, 63%);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+main .form .steps .step-3 .step-info .step-name {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+main .form .steps .step-3.active .step-number {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+  border: 1px solid hsl(243, 100%, 62%);
+}
+main .form .steps .step-4 {
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+main .form .steps .step-4 .step-number {
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 16px;
+  margin-right: 20px;
+  font-weight: bold;
+  transition-duration: 0.3s;
+}
+main .form .steps .step-4 .step-info {
+  text-transform: uppercase;
+}
+main .form .steps .step-4 .step-info .step-head {
+  color: hsl(231, 11%, 63%);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+main .form .steps .step-4 .step-info .step-name {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+main .form .steps .step-4.active .step-number {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+  border: 1px solid hsl(243, 100%, 62%);
 }/*# sourceMappingURL=main.css.map */
