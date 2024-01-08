@@ -29,6 +29,10 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+*a {
+  text-decoration: none;
+}
+
 main {
   height: 100vh;
   background-color: $magnolia;
@@ -39,18 +43,22 @@ main {
     background-color: $white;
     padding: 15px;
     display: flex;
-    gap: 30px;
+    gap: 50px;
     border-radius: 8px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 20px;
     .steps {
       background-image: url(./assets/images/bg-sidebar-desktop.svg);
-      padding: 20px;
-      width: 274px;
+      padding: 35px 25px;
+      width: 100%;
+      max-width: 274px;
       height: 567px;
       @for $i from 1 through 4 {
         .step-#{$i} {
           @extend %center;
           justify-content: flex-start;
-          margin-top: 30px;
+          margin-bottom: 35px;
           .step-number {
             color: white;
             width: 35px;
@@ -59,7 +67,7 @@ main {
             border: 1px solid white;
             @extend %center;
             font-size: 16px;
-            margin-right: 20px;
+            margin-right: 15px;
             font-weight: bold;
             transition-duration: 0.3s;
           }
@@ -75,6 +83,7 @@ main {
               color: $white;
               letter-spacing: 2px;
               font-size: 14px;
+              font-weight: bold;
             }
           }
           &.active {
@@ -83,6 +92,123 @@ main {
               color: black;
               border: 1px solid $purplishBlue;
             }
+          }
+        }
+      }
+    }
+    .form-area {
+      padding: 40px;
+      padding-bottom: 20px;
+      position: relative;
+      max-width: 490px;
+      width: 100%;
+      .form-header {
+        margin-bottom: 10px;
+        font-size: 30px;
+        color: $marineBlue;
+      }
+      .form-description {
+        color: $coolGray;
+        font-size: 15px;
+      }
+      .fields {
+        margin-top: 40px;
+        .field {
+          margin-bottom: 25px;
+          label {
+            display: block;
+            margin-bottom: 5px;
+            color: $marineBlue;
+          }
+          input {
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            border: 1px solid $lightGray;
+            &::placeholder {
+              color: $coolGray;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+      .plans {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+        .plan-box {
+          padding: 15px;
+          position: relative;
+          // #adbeff26 the background on checked status
+          label {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            top: 0;
+            padding: 15px;
+            border: 1px solid $lightGray;
+            border-radius: 7px;
+            cursor: pointer;
+          }
+          input {
+            appearance: none;
+            &:focus {
+              outline: none;
+            }
+            &:checked + label {
+              background-color: #adbeff26;
+              border-radius: 7px;
+              border-color: $purplishBlue;
+            }
+          }
+          .plan-info {
+            margin-top: 70px;
+            .plan-name {
+              color: $marineBlue;
+            }
+            .plan-offer {
+              margin: 3px 0;
+              color: $coolGray;
+              display: block;
+              font-size: 12px;
+            }
+            .free-over {
+              color: $marineBlue;
+              font-size: 13px;
+              font-weight: 400;
+              margin-top: 5px;
+              // display: none;
+            }
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        width: 407.77px;
+        height: 44.5px;
+        bottom: 20px;
+        .prev {
+          cursor: pointer;
+          color: $coolGray;
+        }
+        .next {
+          padding: 10px 20px;
+          color: $white;
+          border-radius: 6px;
+          border: none;
+          background: $marineBlue;
+          width: 115px;
+          text-align: center;
+          cursor: pointer;
+          &.confirm {
+            background-color: $purplishBlue;
           }
         }
       }
