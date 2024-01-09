@@ -11,14 +11,54 @@ function handleActive() {
     if (window.location.href.slice(-11,) == `${link.className}.html`) {
       setTimeout(() => {
         link.classList.add("active");
-      }, 200);
+      }, 100);
     }
   });
 }
 
-let prev = document.querySelector(".prev");
+let form = document.querySelector(".form-area");
+window.onload = () => {
+  form.style.opacity = '1';
+};
+
+handleActive();
+
+let textField = document.querySelector(".text-input");
+let emailField = document.querySelector(".email-input");
+let telField = document.querySelector(".tel-input");
+
+let personChoice = {
+  "text": '',
+  "email": '',
+  "tel": 0,
+};
+let keys = Object.keys(personChoice);
+
+if (sessionStorage.getItem("choices") && textField && emailField && telField) {
+  let choices = JSON.parse(sessionStorage.getItem("choices"));
+  textField.value = choices["text"];
+  emailField.value = choices["email"];
+  telField.value = choices["tel"];
+  personChoice["text"] = choices["text"];
+  personChoice["email"] = choices["email"];
+  personChoice["tel"] = choices["tel"];
+}
+if (textField && emailField && telField) {
+  textField.oninput = () => {
+    saveData(textField.value, "text");
+  };
+  emailField.oninput = () => {
+    saveData(emailField.value, "email");
+  };
+  telField.oninput = () => {
+    saveData(telField.value, "tel");
+  };
+}
 
 
-handleActive()
-
+function saveData(inputValue, type) {
+  personChoice[type] = inputValue;
+  sessionStorage.setItem("choices", JSON.stringify(personChoice));
+}
+// saveData()
 
